@@ -218,4 +218,9 @@ hr.hr {
         padding-left: 2rem;
         padding-right: 2rem;
     }
+
+    .sectionTwo {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
 }
