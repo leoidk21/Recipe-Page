@@ -1,0 +1,221 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Stone-100: hsl(30, 54%, 90%);
+    --Stone-150: hsl(30, 18%, 87%);
+    --Stone-600: hsl(30, 10%, 34%);
+    --Stone-900: hsl(24, 5%, 18%);
+    --Brown-800: hsl(14, 45%, 36%);
+    --Rose-800: hsl(332, 51%, 32%);
+    --Rose-50: hsl(330, 100%, 98%);
+
+    --font-outfit: "Outfit", sans-serif;
+    --font-young-serif: "Young Serif", serif;
+
+    --font-size: 1rem;
+
+    --font-weight-400: 400;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+
+    --padding-ii: 2rem;
+    --padding-i: 1.25rem;
+
+    --border-radius-i: 1rem;
+    --border-radius-ii: 1.25rem;
+    --border-radius-iii: 0.75rem;
+}
+
+/* Outfit Variable */
+@font-face {
+    font-family: "Outfit";
+    src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("truetype");
+}
+
+/* Young Serif */
+@font-face {
+    font-family: "Young Serif";
+    src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+}
+
+body {
+    display: flex;
+    line-height: 1.6;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: var(--padding-i);
+    background-color: var(--Stone-100);
+    font-family: "Outfit", sans-serif;
+}
+
+.main-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    max-width: 43.75rem;
+    flex-direction: column;
+    background-color: var(--White);
+    border-radius: var(--border-radius-ii);
+    padding: var(--padding-ii) var(--padding-ii) 0 var(--padding-ii);
+}
+
+.sectionOne {
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+.omeletteImg {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius-iii);
+}
+
+/* section two */
+.sectionTwo {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background-color: var(--Rose-50);
+}
+
+.head-txt {
+    color: var(--Stone-900);
+    font-weight: var(--font-weight-400);
+    font-family: var(--font-young-serif);
+}
+
+.recipe-description {
+    margin-top: 1rem;
+    color: var(--Stone-600);
+    font-weight: var(--font-weight-400);
+}
+
+.preparation-list li::marker {
+    color: var(--Rose-800);
+}
+
+.preparation-txt {
+    font-size: 1.25rem;
+    color: var(--Rose-800);
+    font-weight: var(--font-weight-700);
+}
+
+strong {
+    color: var(--Stone-600);
+    font-weight: var(--font-weight-600);
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+ul li,
+ol {
+    padding-left: 1rem;
+    padding-top: 0.75rem;
+    color: var(--Stone-600);
+}
+
+.nutrition-description,
+td:first-child {
+    color: var(--Stone-600);
+}
+
+ol {
+    padding-left: 1.5rem;
+}
+
+ol li {
+    padding-left: 0.75rem;
+}
+
+.instruction-list li::marker {
+    color: var(--Brown-800);
+    font-weight: var(--font-weight-700);
+}
+
+.ingredient-list li::marker {
+    color: var(--Brown-800);
+}
+
+.instruction-list span {
+    color: var(--Stone-600);
+    font-weight: var(--font-weight-700);
+}
+
+.instruction-txt:not(:last-child) {
+    padding-bottom: 0.75rem;
+}
+
+.sectionThree,
+.sectionFour,
+.sectionFive {
+    margin: 1.5rem 0;
+}
+
+.nutrition-description {
+    margin: 1.25rem 0 1rem 0;
+}
+
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nutrition-table td {
+    padding: 0.75rem 1.5rem;
+    border-bottom: 0.0625rem solid var(--Stone-150);
+}
+
+.nutrition-table tr:last-child  td {
+    border-bottom: none;
+}
+
+td:last-child {
+    color: var(--Brown-800);
+    font-weight: var(--font-weight-600);
+}
+
+hr.hr {
+    width: 100%;
+    border: none;
+    height: 0.0625rem;
+    background-color: var(--Stone-150);
+}
+
+.section-txt {
+    color: var(--Brown-800);
+    font-weight: var(--font-weight-400);
+    font-family: var(--font-young-serif);
+}
+
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .main-container,
+    .omeletteImg {
+        border-radius: 0;
+    }
+
+    .main-container {
+        padding: 0;
+    }
+
+    .sectionOne,
+    .sectionTwo,
+    .sectionThree,
+    .sectionFour,
+    .sectionFive {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
